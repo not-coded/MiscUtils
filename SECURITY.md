@@ -1,5 +1,7 @@
 # Supported Versions:
 
+---------------------------
+
 ## Skript (.sk):
 
 | Version | Supported          |
