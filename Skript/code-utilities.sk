@@ -73,7 +73,7 @@ command /heal [<player>]:
 
 command /god [<player>]:
 	usage: {@prefix} &6/god <player>
-	permission: utilities.heal
+	permission: utilities.fly
 	trigger:
 		if {god::%player's uuid%} is not set:
 			set {god::%player's uuid%} to true
