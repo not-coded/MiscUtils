@@ -1,15 +1,15 @@
-# Security Policy
+## Supported Versions:
 
-## Supported Versions
-
-# Skript
+**Skript:**
 
 | Version | Supported          |
 | ------- | ------------------ |
 | 1.1.x   | ✅                |
 | 1.0.x   | ✅                | # :x:
 
-# Plugin
+
+
+**Plugin:**
 
 | Version | Supported          |
 | ------- | ------------------ |
