@@ -1,0 +1,247 @@
+options:
+	prefix: &8[&b&lCode &6&lUtilities&8]
+	version: 0.0.1
+	link: https://raw.githubusercontent.com/not-coded/Code-Utilities/main/Skript/version
+	
+on load:
+	set {_v} to text from "{@link}"
+	if "{@version}" is not equal to "%{_v}%":
+		send "{@prefix} &6Running version: {@version}" to console
+		send "{@prefix} &cUpdate available, version: %{_v}%" to console
+	else:
+		send "{@prefix} &6Running current version: {@version}" to console
+
+on join:
+	if player has permission "staff.utilities.update":
+		set {_v} to text from "{@link}"
+		if "{@version}" is not equal to "%{_v}%":
+			send "{@prefix} &6Running version: {@version}" to player
+			send "{@prefix} &cUpdate available, version: %{_v}%" to player
+		else:
+			send "{@prefix} &6Running current version: {@version}" to player
+
+
+command /codeutilities [<text>]:
+	usage: {@prefix} &6/utilities <reload/credits>
+	aliases: /ut, /cut, /cu
+	permission: staff.utilities
+	trigger:
+		if arg-1 is not set:
+			send "{@prefix} &6/codeutilities <reload/credits/update>"
+		else if arg-1 is set:
+			if arg-1 is "reload":
+				reload script "code-utilities"
+				send "{@prefix} &6Reloaded!"
+			else if arg-1 is "credits" or "credit":
+				send "&6&l―――― {@prefix} &6Credits: &l――――"
+				send "&6      Creator: NotCoded"
+			else if arg-1 is "update" or "upgrade":
+				if player has permission "staff.utilities.update":
+					set {_v} to text from "{@link}"
+					if "{@version}" is not equal to "%{_v}%":
+						send "{@prefix} &6Running version: {@version}" to player
+						send "{@prefix} &cUpdate available, version: %{_v}%" to player
+					else:
+						send "{@prefix} &6Running current version: {@version}" to player
+				else:
+					send "{@prefix} &6No permission!"
+		
+command /enchant [<enchantment type>]:
+	usage: {@prefix} &6/enchant <enchantment>
+	permission: utilities.enchant
+	aliases: /enchantment
+	trigger:
+		if arg-1 is not set:
+			send "{@prefix} &6/enchant <enchantment>"
+		else if arg-1 is set:
+			if player's tool is air:
+				send "{@prefix} &6/enchant <enchantment>"
+			else if player's tool is not air:
+				enchant player's tool with arg-1
+				send "{@prefix} &6Your item has been enchanted with &c%arg-1%&6."
+				
+command /heal [<player>]:
+	usage: {@prefix} &6/heal <player>
+	permission: utilities.heal
+	trigger:
+		if arg-1 is not set:
+			set health of player to maximum health of player
+			send "{@prefix} &6You have been healed."
+		else if arg-1 is set:
+			set health of arg-1 to maximum health of arg-1
+			send "{@prefix} &6You have been healed." to arg-1
+
+command /god [<player>]:
+	usage: {@prefix} &6/god <player>
+	permission: utilities.heal
+	trigger:
+		if {god::%player's uuid%} is not set:
+			set {god::%player's uuid%} to true
+			send "{@prefix} &6Your god mode has now been set to &ctrue&6."
+		else if {god::%player's uuid%} is set:
+			if {god::%player's uuid%} is false:
+				set {god::%player's uuid%} to true
+				send "{@prefix} &6Your god mode has now been set to &ctrue&6."
+			else if {god::%player's uuid%} is true:
+				set {god::%player's uuid%} to false
+				send "{@prefix} &6Your god mode has now been set to &cfalse&6."
+				
+on damage:
+	if victim is a player:
+		if {god::%victim's uuid%} is set:
+			{god::%victim's uuid%} is true
+			cancel event
+			{god::%victim's uuid%} is false
+		{god::%victim's uuid%} is not set
+
+
+command /fly [<offline player>]:
+	usage: {@prefix} &6/fly <player>
+	permission: utilities.heal
+	trigger:
+		if arg-1 is not set:
+			if {flight::%player's uuid%} is not set:
+				set {flight::%player's uuid%} to true
+				set player's flight mode to true
+				send "{@prefix} &6Your flight mode has now been set to &ctrue&6."
+			else if {flight::%player's uuid%} is set:
+				if {flight::%player's uuid%} is false:
+					set {flight::%player's uuid%} to true
+					set player's flight mode to true
+					send "{@prefix} &6Your flight mode has now been set to &ctrue&6."
+				else if {flight::%player's uuid%} is true:
+					set {flight::%player's uuid%} to false
+					set player's flight mode to false
+					send "{@prefix} &6Your flight mode has now been set to &cfalse&6."
+					
+		else if arg-1 is set:
+			if {flight::%arg-1's uuid%} is not set:
+				set {flight::%arg-1's uuid%} to true
+				set arg-1's flight mode to true
+				send "{@prefix} &6Your flight mode has now been set to &ctrue&6." to arg-1
+			else if {flight::%arg-1's uuid%} is set:
+				if {flight::%arg-1's uuid%} is false:
+					set {flight::%arg-1's uuid%} to true
+					set arg-1's flight mode to true
+					send "{@prefix} &6Your flight mode has now been set to &ctrue&6." to arg-1
+				else if {flight::%arg-1's uuid%} is true:
+					set {flight::%arg-1's uuid%} to false
+					set arg-1's flight mode to false
+					send "{@prefix} &6Your flight mode has now been set to &cfalse&6." to arg-1
+			
+
+
+
+
+
+command /gmc [<player>]:
+	usage: {@prefix} &6/gmc <player>
+	permission: utilities.gmc
+	trigger:
+		if arg-1 is not set:
+			set player's gamemode to creative
+			send "{@prefix} &6Your gamemode has been set to &ccreative&6."
+		else if arg-1 is set:
+			set arg-1's gamemode to creative
+			send "{@prefix} &6Your gamemode has been set to &ccreative&6." to arg-1
+
+command /gms [<player>]:
+	usage: {@prefix} &6/gms <player>
+	permission: utilities.gms
+	trigger:
+		if arg-1 is not set:
+			set player's gamemode to survival
+			send "{@prefix} &6Your gamemode has been set to &csurvival&6."
+		else if arg-1 is set:
+			set arg-1's gamemode to survival
+			send "{@prefix} &6Your gamemode has been set to &csurvival&6." to arg-1
+
+command /gma [<player>]:
+	usage: {@prefix} &6/gma <player>
+	permission: utilities.gma
+	trigger:
+		if arg-1 is not set:
+			set player's gamemode to adventure
+			send "{@prefix} &6Your gamemode has been set to &cadventure&6."
+		else if arg-1 is set:
+			set arg-1's gamemode to adventure
+			send "{@prefix} &6Your gamemode has been set to &cadventure&6." to arg-1
+			
+command /gmsp [<player>]:
+	usage: {@prefix} &6/gmsp <player>
+	permission: utilities.gmsp 
+	trigger:
+		if arg-1 is not set:
+			set player's gamemode to spectator
+			send "{@prefix} &6Your gamemode has been set to &cspectator&6."
+		else if arg-1 is set:
+			set arg-1's gamemode to spectator
+			send "{@prefix} &6Your gamemode has been set to &cspectator&6." to arg-1
+
+command /gamemode [<text>] [<player>]:
+	usage: {@prefix} &6/gamemode <survival/creative/adventure/spectator> <player>
+	permission: utilities.gamemode.all
+	trigger:
+		if arg-1 is not set:
+			send "{@prefix} &6/gamemode <survival/creative/adventure/spectator> <player>"
+		else if arg-1 is set:
+			if arg-2 is not set:
+				if arg-1 is "survival" or "s" or "0":
+					set player's gamemode to survival
+					send "{@prefix} &6Your gamemode has been set to &csurvival&6."
+				if arg-1 is "creative" or "c" or "1":
+					set player's gamemode to creative
+					send "{@prefix} &6Your gamemode has been set to &ccreative&6."
+				if arg-1 is "spectator" or "sp" or "3":
+					set player's gamemode to spectator
+					send "{@prefix} &6Your gamemode has been set to &cspectator&6."
+				else if arg-1 is "adventure" or "a" or "2":
+					set player's gamemode to adventure
+					send "{@prefix} &6Your gamemode has been set to &cadventure&6."
+			else if arg-2 is set:
+				if arg-1 is "survival" or "s" or "0":
+					set arg-2's gamemode to survival
+					send "{@prefix} &6Your gamemode has been set to &csurvival&6." to arg-2
+				if arg-1 is "creative" or "c" or "1":
+					set arg-2's gamemode to creative
+					send "{@prefix} &6Your gamemode has been set to &ccreative&6." to arg-2
+				if arg-1 is "spectator" or "sp" or "3":
+					set arg-2's gamemode to spectator
+					send "{@prefix} &6Your gamemode has been set to &cspectator&6." to arg-2
+				else if arg-1 is "adventure" or "a" or "2":
+					set arg-2's gamemode to adventure
+					send "{@prefix} &6Your gamemode has been set to &cadventure&6." to arg-2
+					
+command /gm [<text>] [<player>]:
+	usage: {@prefix} &6/gm <s/c/a/s> <player>
+	permission: utilities.gamemode.all
+	trigger:
+		if arg-1 is not set:
+			send "{@prefix} &6/gm <s/c/a/sp> <player>"
+		else if arg-1 is set:
+			if arg-2 is not set:
+				if arg-1 is "s" or "survival" or "0":
+					set player's gamemode to survival
+					send "{@prefix} &6Your gamemode has been set to &csurvival&6."
+				if arg-1 is "c" or "creative" or "1":
+					set player's gamemode to creative
+					send "{@prefix} &6Your gamemode has been set to &ccreative&6."
+				if arg-1 is "sp" or "spectator" or "3":
+					set player's gamemode to spectator
+					send "{@prefix} &6Your gamemode has been set to &cspectator&6."
+				else if arg-1 is "a" or "adventure" or "2":
+					set player's gamemode to adventure
+					send "{@prefix} &6Your gamemode has been set to &cadventure&6."
+			else if arg-2 is set:
+				if arg-1 is "s" or "survival" or "0":
+					set arg-2's gamemode to survival
+					send "{@prefix} &6Your gamemode has been set to &csurvival&6." to arg-2
+				if arg-1 is "c" or "creative" or "1":
+					set arg-2's gamemode to creative
+					send "{@prefix} &6Your gamemode has been set to &ccreative&6." to arg-2
+				if arg-1 is "sp" or "spectator" or "3":
+					set arg-2's gamemode to spectator
+					send "{@prefix} &6Your gamemode has been set to &cspectator&6." to arg-2
+				else if arg-1 is "a" or "adventure" or "2":
+					set arg-2's gamemode to adventure
+					send "{@prefix} &6Your gamemode has been set to &cadventure&6." to arg-2
