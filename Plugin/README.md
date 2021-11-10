@@ -1,5 +1,5 @@
 # Code Utilities
-Hey! This is a repository containing a .sk and a .jar file, made for your minecraft server.
+This is the folder containing the .jar file.
 
 # Difference between .sk and .jar:
 
