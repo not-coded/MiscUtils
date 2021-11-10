@@ -1,6 +1,17 @@
+#  ________________  
+# |                |  
+# |    Made by:    |  
+# |  ~ NotCoded ~  |  
+# |                | 
+# | Code Utilities |  
+# | - Ver 1.0.1 -  |
+# |________________|
+#
+
+
 options:
 	prefix: &8[&b&lCode &6&lUtilities&8]
-	version: 1.0.0
+	version: 1.0.1
 	link: https://raw.githubusercontent.com/not-coded/Code-Utilities/main/Skript/version
 	
 on load:
@@ -73,7 +84,7 @@ command /heal [<player>]:
 
 command /god [<player>]:
 	usage: {@prefix} &6/god <player>
-	permission: utilities.fly
+	permission: utilities.god
 	trigger:
 		if {god::%player's uuid%} is not set:
 			set {god::%player's uuid%} to true
@@ -97,7 +108,7 @@ on damage:
 
 command /fly [<offline player>]:
 	usage: {@prefix} &6/fly <player>
-	permission: utilities.heal
+	permission: utilities.fly
 	trigger:
 		if arg-1 is not set:
 			if {flight::%player's uuid%} is not set:
@@ -131,7 +142,43 @@ command /fly [<offline player>]:
 			
 
 
-
+every second:
+	loop all players:
+		set {playtime::%loop-player%} to loop-player's time played
+	
+command /playtime [<offline player>]:
+	aliases: /pt, /played
+	trigger:
+		if arg 1 is not set:
+			send "{@prefix} &cYour &6playtime is &c%player's time played%&6."
+			stop
+		if arg 1 is set:
+			if arg 1 is "top" or "leaderboard" or "lb":
+				loop {playtime::*}:
+					add 1 to {_size}
+					if {_low.to.high.list::%loop-value%} is not set:
+						set {_low.to.high.list::%loop-value%} to loop-index
+					else:
+						set {_n} to 0
+						loop {_size} times:
+							set {_n} to {_n}+1
+							{_low.to.high.list::%loop-value-1%.%{_n}%} is not set
+							set {_low.to.high.list::%loop-value-1%.%{_n}%} to loop-index
+							stop loop
+				wait 1 tick
+				set {_n} to size of {_low.to.high.list::*}
+				loop {_low.to.high.list::*}:
+					set {_high.to.low.list::%{_n}%} to loop-value
+					set {_n} to {_n}-1
+				wait 1 tick
+				message "&6&m------------&r &6Playtime Top 10 &6&m------------"
+				loop {_high.to.low.list::*}:
+					add 1 to {_result}
+					send "&c%loop-value parsed as an offline player%&6: &c%{playtime::%loop-value%}%"
+					if {_result} is 10:
+						stop
+			else:
+				send "{@prefix} &c%arg 1%'s &6playtime is &c%arg-1's time played%&6."
 
 
 command /gmc [<player>]:
