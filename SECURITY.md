@@ -1,6 +1,6 @@
 ## Supported Versions:
 
-**Skript:**
+# Skript (.sk):
 
 | Version | Supported          |
 | ------- | ------------------ |
@@ -9,7 +9,7 @@
 
 ---------------------------
 
-**Plugin:**
+# Plugin (.jar):
 
 | Version | Supported          |
 | ------- | ------------------ |
