@@ -1,6 +1,6 @@
 options:
 	prefix: &8[&b&lCode &6&lUtilities&8]
-	version: 0.0.1
+	version: 1.0.0
 	link: https://raw.githubusercontent.com/not-coded/Code-Utilities/main/Skript/version
 	
 on load:
@@ -21,9 +21,9 @@ on join:
 			send "{@prefix} &6Running current version: {@version}" to player
 
 
-command /codeutilities [<text>]:
+command /code-utilities [<text>]:
 	usage: {@prefix} &6/utilities <reload/credits>
-	aliases: /ut, /cut, /cu
+	aliases: /ut, /cut, /cu, /codeutilities, /codeut
 	permission: staff.utilities
 	trigger:
 		if arg-1 is not set:
