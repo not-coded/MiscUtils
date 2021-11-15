@@ -1,5 +1,5 @@
 name: Code-Utilities
-version: '1.0.0'
+version: '${project.version}'
 main: codeutilities.notcoded.Main
 api-version: 1.17
 load: STARTUP
