@@ -1,0 +1,36 @@
+name: Code-Utilities
+version: '1.0.0'
+main: codeutilities.notcoded.Main
+api-version: 1.17
+load: STARTUP
+authors: [ NotCoded ]
+website: https://not-coded.github.io/Code-Utilities/
+
+commands:
+  code-utilities:
+    aliases: [cut, codeutilities, codeut, cu, ut, ]
+    description: ...
+    usage: §8[§b§lCode §6§lUtilities§8] §6/<command>
+    #permission: codeutilities.command
+
+  heal:
+    description: ...
+    usage: §8[§b§lCode §6§lUtilities§8] §6/<command> <player>
+    permission: codeutilities.heal
+
+  feed:
+    description: ...
+    usage: §8[§b§lCode §6§lUtilities§8] §6/<command> <player>
+    permission: codeutilities.feed
+
+  god:
+    description: ...
+    usage: §8[§b§lCode §6§lUtilities§8] §6/<command> <player>
+    permission: codeutilities.god
+
+  fly:
+    description: ...
+    usage: §8[§b§lCode §6§lUtilities§8] §6/<command> <player>
+    permission: codeutilities.fly
+
+
