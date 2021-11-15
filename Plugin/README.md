@@ -4,6 +4,9 @@ This is the Code Utilities plugin!
 
 # Commands:
 
+/code-utilities <cmds> - Lists commands.
+/code-utilities <perms> - Lists commands and their permissions.
+
 /heal - Heals the player
 /heal <player> - Heals the other player specified
   
@@ -21,8 +24,8 @@ This is the Code Utilities plugin!
 codeutilities.heal - Allows player to heal
 codeutilities.heal.others - Allows player to heal others
 
-codeutilities.heal - Allows player to feed
-codeutilities.heal.others - Allows player to feed others
+codeutilities.feed - Allows player to feed
+codeutilities.feed.others - Allows player to feed others
 
 codeutilities.fly - Allows player to fly
 codeutilities.fly.others - Allows player to make others fly
