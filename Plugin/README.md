@@ -6,9 +6,9 @@ This is the Code Utilities plugin!
 
 ----------------------------------------------------------------
 
-/code-utilities <cmds> - Lists commands. 
+/code-utilities cmds - Lists commands. 
   
-/code-utilities <perms> - Lists commands and their permissions.
+/code-utilities perms - Lists commands and their permissions.
   
 ----------------------------------------------------------------
   
