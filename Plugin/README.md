@@ -59,9 +59,9 @@ codeutilities.fly.others - Allows player to make others fly
 
 ----------------------------------------------------------------
 
-codeutilities.fly - Allows player to be invincible
+codeutilities.god - Allows player to be invincible
 
-codeutilities.fly.others - Allows player to make others invincible
+codeutilities.god.others - Allows player to make others invincible
 
 ----------------------------------------------------------------
   
