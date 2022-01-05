@@ -49,9 +49,8 @@ function CheckUpdate(S: sender):
 		send "{@prefix} &6This plugin is up to date!" to {_S}
 
 command /code-utilities [<text>]:
-	usage: {@prefix} &6/utilities <reload/credits>
+	usage: {@prefix} &6/codeutilities <cmds/perms/update>
 	aliases: /ut, /cut, /cu, /codeutilities, /codeut
-	permission: staff.utilities
 	trigger:
 		if arg-1 is not set:
 			send "&b-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-"
