@@ -1,3 +1,17 @@
-msg:
-  prefix: §8[§b§lCode §6§lUtilities§8]
-  no-perms: §8[§b§lCode §6§lUtilities§8] §6You don't have permission!
+##############################
+#       Code Utilities       #
+#           1.0.1            #
+##############################
+
+##########################
+#   Join/Quit Messages   #
+##########################
+
+## Variables ##
+# %player%: the player that joined (not needed)
+# join-message: "JOIN" -----> join-message: "JOIN %player%"
+
+join-message: ""
+#join-message: "JOIN: %player%" (JOIN: NotCoded)
+quit-message: ""
+#join-message: "LEAVE: %player%" (LEAVE: NotCoded)

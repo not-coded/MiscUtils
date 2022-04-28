@@ -1,74 +1,19 @@
 # Code Utilities
 This is the Code Utilities plugin!
 
+Note: THESE ARE NOT THE SAME! They are all ENTIRELY different, and so we do not recommend you to install both plugins/files as it may break stuff.
 
-## Commands:
+Warning: Please do not install 2 (or more) versions of Code-Utilities (Skript or Plugin), as it may break stuff.
 
-----------------------------------------------------------------
-
-/code-utilities [cmds] - Lists commands. 
-  
-/code-utilities [perms] - Lists commands and their permissions.
-  
-----------------------------------------------------------------
-  
-/heal - Heals the player 
-  
-/heal [player] - Heals the other player specified
-  
-----------------------------------------------------------------
-  
-/feed - Feeds the player 
-  
-/feed [player] - Feeds the other player specified
-  
-----------------------------------------------------------------
-  
-/fly - Makes the player able to fly 
-  
-/fly [player] - Makes the player other player specified able to fly
-
-----------------------------------------------------------------
-  
-/god - Makes the player able to fly 
-  
-/god [player] - Makes the player other player specified able to fly
-  
-----------------------------------------------------------------
-  
-
-## Permissions:
-  
-----------------------------------------------------------------  
-  
-codeutilities.heal - Allows player to heal
-  
-codeutilities.heal.others - Allows player to heal others
-
-----------------------------------------------------------------
-
-codeutilities.feed - Allows player to feed
-  
-codeutilities.feed.others - Allows player to feed others
-
-----------------------------------------------------------------
-
-codeutilities.fly - Allows player to fly
-  
-codeutilities.fly.others - Allows player to make others fly
-
-----------------------------------------------------------------
-
-codeutilities.god - Allows player to be invincible
-
-codeutilities.god.others - Allows player to make others invincible
-
-----------------------------------------------------------------
-  
-  
 ## Difference between .sk and .jar:
 
-.sk requires the plugin "Skript".
+.sk requires the plugin "Skript" and the other addons listed in its skript releases.
 
 .jar just requires you putting it in your "plugins" folder.
+
+## Commands/Permissions
+
+For commands use: <a href="https://github.com/not-coded/Code-Utilities/wiki/Commands">Commands</a>
+
+For permissions use: <a href="https://github.com/not-coded/Code-Utilities/wiki/Permissions">Permissions</a>
 

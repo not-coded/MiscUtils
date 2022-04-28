@@ -1,4 +1,10 @@
-D:\GitHub\Code-Utilities\Plugin\src\main\java\codeutilities\notcoded\NoDamage.java
-D:\GitHub\Code-Utilities\Plugin\src\main\java\codeutilities\notcoded\codeutilities.java
-D:\GitHub\Code-Utilities\Plugin\src\main\java\codeutilities\notcoded\codeut.java
+D:\GitHub\Code-Utilities\Plugin\src\main\java\codeutilities\notcoded\commands\gamemode.java
+D:\GitHub\Code-Utilities\Plugin\src\main\java\codeutilities\notcoded\commands\codeutilities.java
+D:\GitHub\Code-Utilities\Plugin\src\main\java\codeutilities\notcoded\config\Config.java
+D:\GitHub\Code-Utilities\Plugin\src\main\java\codeutilities\notcoded\commands\fly.java
+D:\GitHub\Code-Utilities\Plugin\src\main\java\codeutilities\notcoded\commands\god.java
+D:\GitHub\Code-Utilities\Plugin\src\main\java\codeutilities\notcoded\misc\Utilities.java
+D:\GitHub\Code-Utilities\Plugin\src\main\java\codeutilities\notcoded\commands\feed.java
 D:\GitHub\Code-Utilities\Plugin\src\main\java\codeutilities\notcoded\Main.java
+D:\GitHub\Code-Utilities\Plugin\src\main\java\codeutilities\notcoded\commands\heal.java
+D:\GitHub\Code-Utilities\Plugin\src\main\java\codeutilities\notcoded\events\PlayerJoinLeave.java
