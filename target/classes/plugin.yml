@@ -1,0 +1,61 @@
+name: MiscUtils
+version: '1.0.2'
+main: net.notcoded.miscutils.Main
+api-version: 1.13
+description: The light-weight plugin for easily managing your server with a few extra features.
+load: STARTUP
+authors: [ NotCoded ]
+website: https://notcoded.cf/miscutils
+
+commands:
+  # Gamemode:
+
+  gamemode:
+    aliases: [ gm ]
+    usage: §8[§b§lMisc§6§lUtils§8] §6/<command> <gamemode> <player>
+    permission: miscutils.gamemode
+
+  gmc:
+    usage: §8[§b§lMisc§6§lUtils§8] §6/<command> <player>
+    permission: miscutils.gamemode
+
+  gms:
+    usage: §8[§b§lMisc§6§lUtils§8] §6/<command> <player>
+    permission: miscutils.gamemode
+
+  gmsp:
+    usage: §8[§b§lMisc§6§lUtils§8] §6/<command> <player>
+    permission: miscutils.gamemode
+
+  gma:
+    usage: §8[§b§lMisc§6§lUtils§8] §6/<command> <player>
+    permission: miscutils.gamemode
+
+
+  # Normal commands:
+  miscutils:
+    aliases: [mu, miscut, utils, miscutilities, misc-utilities]
+    usage: §8[§b§lMisc§6§lUtils§8] §cNo arguments/invalid argument. Correct usage, §f/<command> §7<§fhelp/about§7>
+    #permission: miscutils.command
+
+  heal:
+    aliases: [regeneration]
+    usage: §8[§b§lMisc§6§lUtils§8] §6/<command> <player>
+    permission: miscutils.heal
+
+  feed:
+    aliases: [food, eat]
+    usage: §8[§b§lMisc§6§lUtils§8] §6/<command> <player>
+    permission: miscutils.feed
+
+  god:
+    aliases: [invincible]
+    usage: §8[§b§lMisc§6§lUtils§8] §6/<command> <player>
+    permission: miscutils.god
+
+  fly:
+    aliases: [flight]
+    usage: §8[§b§lMisc§6§lUtils§8] §6/<command> <player>
+    permission: miscutils.fly
+
+

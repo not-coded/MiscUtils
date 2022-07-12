@@ -1,0 +1,31 @@
+#################################
+#             MiscUtils         #
+config-version: 1.0.2           #
+#################################
+
+##########################
+#   Join/Quit Messages   #
+##########################
+
+## Variables ##
+# %player%: the player that joined (not needed)
+# join-message: "JOIN" -----> join-message: "JOIN %player%"
+
+join-message: ""
+# join-message: "JOIN: %player%" (JOIN: NotCoded)
+quit-message: ""
+# join-message: "LEAVE: %player%" (LEAVE: NotCoded)
+
+###############
+#   Updates   #
+###############
+
+check for updates: true
+notify console: true
+notify player on join: true
+
+##############
+#    Chat    #
+##############
+
+chatcolor: true

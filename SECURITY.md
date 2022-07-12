@@ -2,8 +2,8 @@
 
 | Version | Supported          |
 | ------- | ------------------ |
-| Skript (.sk)  | ✅                |
-| Plugin (.jar)   | ✅                | # :x:
+| Skript (.sk)  | :x:                |
+| Plugin (.jar)   | ✅                |
 
 ---------------------------
 

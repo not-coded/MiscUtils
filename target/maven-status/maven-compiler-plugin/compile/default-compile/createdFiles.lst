@@ -1,0 +1,11 @@
+net\notcoded\miscutils\config\Config.class
+net\notcoded\miscutils\misc\Utilities.class
+net\notcoded\miscutils\commands\feed.class
+net\notcoded\miscutils\events\PlayerChat.class
+net\notcoded\miscutils\events\PlayerJoinLeave.class
+net\notcoded\miscutils\Main.class
+net\notcoded\miscutils\commands\miscutils.class
+net\notcoded\miscutils\commands\gamemode.class
+net\notcoded\miscutils\commands\god.class
+net\notcoded\miscutils\commands\fly.class
+net\notcoded\miscutils\commands\heal.class
