@@ -1,5 +1,5 @@
 name: MiscUtils
-version: '1.0.2'
+version: '1.0.3'
 main: net.notcoded.miscutils.Main
 api-version: 1.13
 description: The light-weight plugin for easily managing your server with a few extra features.
@@ -57,5 +57,10 @@ commands:
     aliases: [flight]
     usage: §8[§b§lMisc§6§lUtils§8] §6/<command> <player>
     permission: miscutils.fly
+
+  ping:
+    aliases: [latency]
+    usage: §8[§b§lMisc§6§lUtils§8] §6/command <player>
+    permission: miscutils.ping
 
 

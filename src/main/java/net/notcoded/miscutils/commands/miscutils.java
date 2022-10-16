@@ -83,6 +83,11 @@ public class miscutils implements TabExecutor {
                     } else  if(Utilities.hasPermission(player, "heal")){
                         player.sendMessage("§f/heal");
                     }
+                    if(Utilities.hasPermission(player, "ping.others") && Utilities.hasPermission(player, "ping")) {
+                        player.sendMessage("§f/ping §8[§fplayer§8]");
+                    } else if(Utilities.hasPermission(player, "ping")){
+                        player.sendMessage("§f/ping");
+                    }
 
                     if(Utilities.hasPermission(player, "gamemode.others") && Utilities.hasPermission(player, "gamemode")) {
                         if(Utilities.hasPermission(player, "gamemode.survival") && Utilities.hasPermission(player, "gamemode.all")) {

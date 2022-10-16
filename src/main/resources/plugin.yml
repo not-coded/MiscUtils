@@ -58,4 +58,9 @@ commands:
     usage: §8[§b§lMisc§6§lUtils§8] §6/<command> <player>
     permission: miscutils.fly
 
+  ping:
+    aliases: [latency]
+    usage: §8[§b§lMisc§6§lUtils§8] §6/command <player>
+    permission: miscutils.ping
+
 

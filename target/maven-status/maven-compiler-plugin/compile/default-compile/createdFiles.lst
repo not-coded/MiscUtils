@@ -5,6 +5,7 @@ net\notcoded\miscutils\events\PlayerChat.class
 net\notcoded\miscutils\events\PlayerJoinLeave.class
 net\notcoded\miscutils\Main.class
 net\notcoded\miscutils\commands\miscutils.class
+net\notcoded\miscutils\commands\ping.class
 net\notcoded\miscutils\commands\gamemode.class
 net\notcoded\miscutils\commands\god.class
 net\notcoded\miscutils\commands\fly.class

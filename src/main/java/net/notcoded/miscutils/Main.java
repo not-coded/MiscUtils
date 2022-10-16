@@ -20,7 +20,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 // |  ~ NotCoded ~  |
 // |                |
 // |   MiscUtils    |
-// | - Ver 1.0.2 -  |
+// | - Ver 1.0.3 -  |
 // |________________|
 //
 
@@ -70,6 +70,7 @@ public final class Main extends JavaPlugin {
             getCommand("feed").setExecutor(new feed());
             getCommand("fly").setExecutor(new fly());
             getCommand("god").setExecutor(new god());
+            getCommand("ping").setExecutor(new ping());
         } catch (Exception e) {
             e.printStackTrace();
         }
