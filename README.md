@@ -4,7 +4,7 @@ This is the MiscUtils plugin!
 
 MiscUtils provides a lot of features, like chat color, fly, heal, and more!
 
-**CRITICAL**: If you have an older version of Code-Utilities, then please delete the config file.
+**CRITICAL**: If you have an older version of MiscUtils, then please delete the config file.
 
 
 ## Commands/Permissions for MiscUtils:
